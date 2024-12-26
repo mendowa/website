@@ -13,26 +13,26 @@ const benefitList: BenefitsProps[] = [
     icon: "Blocks",
     title: "Build Brand Trust",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Establish credibility with your audience through consistent messaging, quality content, and a professional online presence.",
   },
   {
     icon: "LineChart",
     title: "More Leads",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "Attract more potential customers with targeted strategies, optimized campaigns, and engaging content.",
   },
   {
     icon: "Wallet",
     title: "Higher Conversions",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      "Turn visitors into loyal customers with clear CTAs, persuasive design, and seamless user experiences.",
   },
   {
     icon: "Sparkle",
     title: "Test Marketing Ideas",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
-  },
+      "Experiment with innovative campaigns and strategies to see what resonates best with your audience.",
+  },  
 ];
 
 export const BenefitsSection = () => {
