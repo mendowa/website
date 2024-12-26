@@ -30,7 +30,7 @@ const reviewList: ReviewProps[] = [
     name: "John Doe",
     userName: "Product Manager",
     comment:
-      "Wow NextJs + Shadcn is awesome!. This template lets me change colors, fonts and images to match my brand identity. ",
+      "Next.js and Shadcn are a game changer! This template makes it so easy to customize everything to match our brand perfectly.",
     rating: 5.0,
   },
   {
@@ -38,42 +38,73 @@ const reviewList: ReviewProps[] = [
     name: "Sophia Collins",
     userName: "Cybersecurity Analyst",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. ",
+      "The flexibility and performance of this template are incredible. It saves so much time without sacrificing quality.",
     rating: 4.8,
   },
-
   {
     image: "https://github.com/shadcn.png",
-    name: "Adam Johnson",
-    userName: "Chief Technology Officer",
+    name: "Carlos Méndez",
+    userName: "Desarrollador Web",
     comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "¡Increíble! Este template me permite personalizar fácilmente cada detalle para que coincida con la identidad de mi marca. ¡Altamente recomendado!",
+    rating: 5.0,
+  },
+  {
+    image: "https://github.com/shadcn.png",
+    name: "Hana Kim",
+    userName: "UX Designer",
+    comment:
+      "사용하기 정말 쉬워요! 색상과 글꼴을 간단히 바꿀 수 있고 디자인도 세련됐어요. 추천합니다!",
     rating: 4.9,
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Ethan Parker",
-    userName: "Data Scientist",
+    name: "Luca Rossi",
+    userName: "Responsabile IT",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "Un template fantastico! È molto facile da personalizzare e si integra perfettamente con le nostre esigenze aziendali.",
     rating: 5.0,
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Ava Mitchell",
-    userName: "IT Project Manager",
+    name: "Yuki Tanaka",
+    userName: "フロントエンドエンジニア",
     comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud incididunt consectetur adipiscing elit.",
-    rating: 5.0,
+      "とても使いやすいテンプレートです。色やフォントを簡単に変更できるので、ブランドに合わせたカスタマイズが楽にできました。",
+    rating: 4.9,
   },
   {
     image: "https://github.com/shadcn.png",
     name: "Isabella Reed",
     userName: "DevOps Engineer",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    rating: 4.9,
+      "This is by far the best template I've used. Everything works out of the box, and the documentation is superb.",
+    rating: 5.0,
   },
+  {
+    image: "https://github.com/shadcn.png",
+    name: "Chen Wei",
+    userName: "软件工程师",
+    comment:
+      "这个模板非常棒！不仅功能强大，而且易于定制，完全符合我们的需求。",
+    rating: 4.8,
+  },
+  {
+    image: "https://github.com/shadcn.png",
+    name: "Ethan Parker",
+    userName: "Data Scientist",
+    comment:
+      "I was blown away by how smooth the setup was. It's fast, reliable, and looks amazing. Perfect for any project.",
+    rating: 5.0,
+  },
+  {
+    image: "https://github.com/shadcn.png",
+    name: "Sofia López",
+    userName: "Analista de Datos",
+    comment:
+      "Este template me ha ahorrado muchísimo tiempo y esfuerzo. Todo está tan bien estructurado que es un placer trabajar con él.",
+    rating: 4.9,
+  },  
 ];
 
 export const TestimonialSection = () => {
