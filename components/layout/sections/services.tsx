@@ -19,25 +19,51 @@ const serviceList: ServiceProps[] = [
   {
     title: "Custom Domain Integration",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit adipisicing.",
+      "Easily connect your custom domain to establish a professional and recognizable online presence for your brand.",
     pro: 0,
   },
   {
     title: "Social Media Integrations",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, dicta.",
+      "Seamlessly integrate with popular social platforms like Facebook, Twitter, and Instagram to expand your reach.",
     pro: 0,
   },
   {
     title: "Email Marketing Integrations",
-    description: "Lorem dolor sit amet adipisicing.",
+    description:
+      "Connect with top email marketing tools like Mailchimp and HubSpot to drive targeted campaigns effectively.",
     pro: 0,
   },
   {
     title: "SEO Optimization",
-    description: "Lorem ipsum dolor sit amet consectetur.",
+    description:
+      "Advanced tools and features to boost your site's ranking on search engines and attract more organic traffic.",
     pro: 1,
   },
+  {
+    title: "Advanced Analytics",
+    description:
+      "Gain deep insights into your website’s performance with detailed reports and data visualization.",
+    pro: 1,
+  },
+  {
+    title: "Priority Support",
+    description:
+      "Enjoy 24/7 priority support from our expert team to ensure your issues are resolved quickly.",
+    pro: 1,
+  },
+  {
+    title: "E-Commerce Integrations",
+    description:
+      "Easily integrate with top e-commerce platforms like Shopify and WooCommerce to power your online store.",
+    pro: 0,
+  },
+  {
+    title: "Custom Branding",
+    description:
+      "Take full control of your website's look and feel with custom branding options to match your identity.",
+    pro: 1,
+  },  
 ];
 
 export const ServicesSection = () => {
