@@ -17,7 +17,7 @@ enum PopularPlan {
 interface PlanProps {
   title: string;
   popular: PopularPlan;
-  price: number;
+  price: number | string;
   description: string;
   buttonText: string;
   benefitList: string[];
@@ -29,14 +29,14 @@ const plans: PlanProps[] = [
     popular: 0,
     price: 0,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
+      "Perfect for individuals or small projects to get started without any cost.",
     buttonText: "Start Free Trial",
     benefitList: [
       "1 team member",
       "1 GB storage",
-      "Upto 2 pages",
+      "Up to 2 pages",
       "Community support",
-      "AI assistance",
+      "Basic AI assistance",
     ],
   },
   {
@@ -44,14 +44,14 @@ const plans: PlanProps[] = [
     popular: 1,
     price: 45,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get starterd",
+      "Ideal for growing teams who need more resources and priority support.",
+    buttonText: "Get Started",
     benefitList: [
-      "4 team member",
+      "Up to 4 team members",
       "8 GB storage",
-      "Upto 6 pages",
-      "Priority support",
-      "AI assistance",
+      "Up to 6 pages",
+      "Priority email support",
+      "Advanced AI assistance",
     ],
   },
   {
@@ -59,16 +59,16 @@ const plans: PlanProps[] = [
     popular: 0,
     price: 120,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+      "Designed for large teams and businesses requiring full customization and dedicated support.",
+    buttonText: "Contact Us",
     benefitList: [
-      "10 team member",
+      "Up to 10 team members",
       "20 GB storage",
-      "Upto 10 pages",
+      "Up to 10 pages",
       "Phone & email support",
-      "AI assistance",
+      "Custom AI solutions",
     ],
-  },
+  },  
 ];
 
 export const PricingSection = () => {
