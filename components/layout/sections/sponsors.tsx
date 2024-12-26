@@ -4,10 +4,10 @@
 // import { Marquee } from "@devnomic/marquee";
 // import "@devnomic/marquee/dist/index.css";
 // import { icons } from "lucide-react";
-interface sponsorsProps {
-  icon: string;
-  name: string;
-}
+// interface sponsorsProps {
+//   icon: string;
+//   name: string;
+// }
 
 // const sponsors: sponsorsProps[] = [
 //   {
