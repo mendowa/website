@@ -52,6 +52,7 @@ const plans: PlanProps[] = [
       "Up to 6 pages",
       "Priority email support",
       "Advanced AI assistance",
+      "Sticker Jomok Premium",
     ],
   },
   {
