@@ -84,7 +84,7 @@ export const PricingSection = () => {
       </h2>
 
       <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14">
-        Lorem ipsum dolor sit amet consectetur adipisicing reiciendis.
+      Choose the plan that suits your needs and enjoy unrestricted access to all our features, ensuring the best experience for you and your team.
       </h3>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
