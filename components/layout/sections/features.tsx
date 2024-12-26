@@ -13,38 +13,38 @@ const featureList: FeaturesProps[] = [
     icon: "TabletSmartphone",
     title: "Mobile Friendly",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "Our design ensures seamless functionality and aesthetics on all devices, delivering an exceptional mobile experience.",
   },
   {
     icon: "BadgeCheck",
     title: "Social Proof",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "Build trust with your audience by showcasing testimonials, reviews, and endorsements effectively.",
   },
   {
     icon: "Goal",
     title: "Targeted Content",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "Deliver personalized content that speaks directly to your audience, driving engagement and conversions.",
   },
   {
     icon: "PictureInPicture",
     title: "Strong Visuals",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+      "Capture attention with high-quality visuals and designs that effectively convey your brand message.",
   },
   {
     icon: "MousePointerClick",
     title: "Clear CTA",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+      "Encourage action with well-placed and compelling call-to-action buttons designed to convert.",
   },
   {
     icon: "Newspaper",
     title: "Clear Headline",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
-  },
+      "Communicate your value proposition instantly with headlines that are concise, impactful, and attention-grabbing.",
+  },  
 ];
 
 export const FeaturesSection = () => {
