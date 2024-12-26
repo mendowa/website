@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <SponsorsSection />
+      {/* <SponsorsSection /> */}
       <BenefitsSection />
       <FeaturesSection />
       <ServicesSection />
@@ -51,7 +51,7 @@ export default function Home() {
       <TeamSection />
       <CommunitySection />
       <PricingSection />
-      <ContactSection />
+      {/* <ContactSection /> */}
       <FAQSection />
       <FooterSection />
     </>
