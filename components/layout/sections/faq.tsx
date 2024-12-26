@@ -13,32 +13,32 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free NextJS Shadcn template.",
+    question: "How can I join the Mendowa Discord server?",
+    answer: `It's simple! Click the invite link on our website or social media channels to join us. We'd love to have you!`,
     value: "item-1",
   },
   {
-    question: "Duis aute irure dolor in reprehenderit in voluptate velit?",
+    question: "Is joining the Mendowa Discord server free?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam consectetur sapiente, iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      `Yes, absolutely! Our Discord server is completely free to join. It's open to anyone who wants to be part of our community.`,
     value: "item-2",
   },
   {
     question:
-      "Lorem ipsum dolor sit amet Consectetur natus dolor minus quibusdam?",
+      "What can I do in the Mendowa Discord server?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis.",
+      `You can chat with like-minded people, join exciting discussions, participate in events, and access exclusive content we share with our community.`,
     value: "item-3",
   },
   {
-    question: "Excepteur sint occaecat cupidata non proident sunt?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    question: "Are there rules I need to follow in the Mendowa Discord server?",
+    answer: `Yes, we have a few simple rules to keep the community friendly and respectful. Please check the #rules channel once you join!`,
     value: "item-4",
   },
   {
     question:
-      "Enim ad minim veniam, quis nostrud exercitation ullamco laboris?",
-    answer: "consectetur adipisicing elit. Sint labore.",
+      `Who can I contact if I have issues in the Mendowa Discord server?`,
+    answer: `You can reach out to our moderators or admins directly. They're always ready to help with any concerns or questions you might have.`,
     value: "item-5",
   },
 ];
