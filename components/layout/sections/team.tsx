@@ -31,15 +31,15 @@ export const TeamSection = () => {
       socialNetworks: [
         {
           name: "LinkedIn",
-          url: "https://www.linkedin.com/in/leopoldo-miranda/",
+          url: "#",
         },
         {
           name: "Github",
-          url: "https://github.com/leoMirandaa",
+          url: "#",
         },
         {
           name: "X",
-          url: "https://x.com/leo_mirand4",
+          url: "#",
         },
       ],
     },
@@ -52,15 +52,15 @@ export const TeamSection = () => {
       socialNetworks: [
         {
           name: "LinkedIn",
-          url: "https://www.linkedin.com/in/leopoldo-miranda/",
+          url: "#",
         },
         {
           name: "X",
-          url: "https://x.com/leo_mirand4",
+          url: "#",
         },
         {
           name: "Github",
-          url: "https://github.com/leoMirandaa",
+          url: "#",
         },
       ],
     },
@@ -73,15 +73,15 @@ export const TeamSection = () => {
       socialNetworks: [
         {
           name: "LinkedIn",
-          url: "https://www.linkedin.com/in/leopoldo-miranda/",
+          url: "#",
         },
         {
           name: "Github",
-          url: "https://github.com/leoMirandaa",
+          url: "#",
         },
         {
           name: "X",
-          url: "https://x.com/leo_mirand4",
+          url: "#",
         },
       ],
     },
@@ -94,15 +94,15 @@ export const TeamSection = () => {
       socialNetworks: [
         {
           name: "LinkedIn",
-          url: "https://www.linkedin.com/in/leopoldo-miranda/",
+          url: "#",
         },
         {
           name: "Github",
-          url: "https://github.com/leoMirandaa",
+          url: "#",
         },
         {
           name: "X",
-          url: "https://x.com/leo_mirand4",
+          url: "#",
         },
       ],
     },
