@@ -8,26 +8,42 @@ import Link from "next/link";
 import applicationData from "../../../app/data/application.json"
 
 export const HeroSection = () => {
-  const { theme } = useTheme();
   return (
-    <section className="py-1">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6 text-center">Applications</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <section className="py-10">
+      <div className="container mx-auto px-6 lg:px-8">
+        <h2 className="text-4xl font-extrabold text-white mb-10 text-center">
+          Discover Applications
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {applicationData.map((application) => (
             <div
               key={application.id}
-              className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center"
+              className="bg-gray-900 shadow-lg hover:shadow-2xl hover:shadow-white transition-shadow duration-300 rounded-xl overflow-hidden flex flex-col items-center"
             >
-              {/* Add an image if needed */}
-              <div className="w-full h-40 bg-gray-200 rounded-md mb-4">
+              <div className="w-full h-48 flex items-center justify-center">
                 <img
-                  // src={application.image}
+                  src={application.image}
                   alt={application.name}
-                  className="w-full h-full object-cover rounded-md"
+                  className="w-auto h-full max-h-full object-contain"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-center">{application.name}</h3>
+              <div className="p-6 w-full">
+                <h3 className="text-xl font-semibold text-white mb-2 text-center">
+                  {application.name}
+                </h3>
+                <p className="text-sm text-gray-600 mb-4 text-center">
+                  {application.deskripsi}
+                </p>
+                <button className="block mx-auto bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                  <a 
+                    href={application.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Learn More
+                  </a>
+                </button>
+              </div>
             </div>
           ))}
         </div>
