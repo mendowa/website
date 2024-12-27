@@ -27,7 +27,7 @@ export const TeamSection = () => {
       imageUrl: "https://i.pravatar.cc/250?img=58",
       firstName: "Hwa",
       lastName: "Yeon",
-      positions: ["Vue Fronted Developer", "Creator Of This Website"],
+      positions: ["Vue Fronted Developer", "Creator Of This Website", "UI/UX Designer"],
       socialNetworks: [
         {
           name: "LinkedIn",
