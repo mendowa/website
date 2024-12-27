@@ -16,7 +16,7 @@ export const metadata = {
   description: "Mendowa",
   openGraph: {
     type: "website",
-    url: "https://github.com/Hwayeeon/website.git",
+    url: "https://github.com/nobruf/shadcn-landing-page.git",
     title: "Mendowa",
     description: "Mendowa",
     images: [
@@ -30,7 +30,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "https://github.com/Hwayeeon/website.git",
+    site: "https://github.com/nobruf/shadcn-landing-page.git",
     title: "Mendowa",
     description: "Mendowa",
     images: [
