@@ -16,12 +16,12 @@ export const metadata = {
   description: "Mendowa",
   openGraph: {
     type: "website",
-    url: "https://github.com/nobruf/shadcn-landing-page.git",
+    url: "https://github.com/Hwayeeon/website.git",
     title: "Mendowa",
     description: "Mendowa",
     images: [
       {
-        url: "https://avatars.githubusercontent.com/u/192787967?s=400&u=51a93a4be11a927e03d53fa8be92977139eb006a&v=4",
+        url: "https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/shadcn-vue.jpg",
         width: 1200,
         height: 630,
         alt: "Mendowa",
@@ -34,7 +34,7 @@ export const metadata = {
     title: "Mendowa",
     description: "Mendowa",
     images: [
-      "https://avatars.githubusercontent.com/u/192787967?s=400&u=51a93a4be11a927e03d53fa8be92977139eb006a&v=4",
+      "https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/shadcn-vue.jpg",
     ],
   },
 };
