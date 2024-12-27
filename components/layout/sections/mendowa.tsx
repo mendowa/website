@@ -22,7 +22,7 @@ export const HeroSection = () => {
               {/* Add an image if needed */}
               <div className="w-full h-40 bg-gray-200 rounded-md mb-4">
                 <img
-                  src={application.image}
+                  // src={application.image}
                   alt={application.name}
                   className="w-full h-full object-cover rounded-md"
                 />

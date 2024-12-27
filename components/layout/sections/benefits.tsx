@@ -46,7 +46,7 @@ export const BenefitsSection = () => {
             Discover the Path to Your Goals
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-          Unlock unparalleled growth and achieve your objectives effortlessly. Our platform equips you with the tools and strategies to build trust, attract leads, convert customers, and test innovative marketing ideas. Whether you're establishing a brand or refining your approach, we are your shortcut to success.
+          Unlock unparalleled growth and achieve your objectives effortlessly. Our platform equips you with the tools and strategies to build trust, attract leads, convert customers, and test innovative marketing ideas. Whether you are establishing a brand or refining your approach, we are your shortcut to success.
           </p>
         </div>
 
