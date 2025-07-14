@@ -1,0 +1,57 @@
+---
+import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
+
+import Layout from '~/layouts/PageLayout.astro';
+import BlogList from '~/components/blog/List.astro';
+import Headline from '~/components/blog/Headline.astro';
+import Pagination from '~/components/blog/Pagination.astro';
+
+import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
+
+export const prerender = true;
+
+export const getStaticPaths = (async ({ paginate }) => {
+  return await getStaticPathsBlogList({ paginate });
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { page } = Astro.props as Props;
+const currentPage = page.currentPage ?? 1;
+
+// const allCategories = await findCategories();
+// const allTags = await findTags();
+
+const metadata = {
+  title: `Blog Mendowa${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  description:
+    'Kumpulan artikel, tutorial, dan update terbaru dari Mendowa seputar teknologi, Linux, automasi, dan pengembangan software.',
+  robots: {
+    index: blogListRobots?.index && currentPage === 1,
+    follow: blogListRobots?.follow,
+  },
+  openGraph: {
+    type: 'blog',
+    title: `Blog Mendowa${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+    description: 'Eksplorasi artikel dan panduan menarik dari Mendowa untuk developer dan tech enthusiast.',
+    url: `https://mendowa.dev/blog${currentPage > 1 ? `/page/${currentPage}` : ''}`,
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    <Headline subtitle="Artikel, update, dan panduan dari dunia Linux, automasi, dan teknologi">
+      Blog Mendowa
+    </Headline>
+
+    <!-- <div class="mb-6">
+      <PostTags tags={allCategories} class="mb-2" title="Kategori:" isCategory />
+      <PostTags tags={allTags} title="Tag populer:" />
+    </div> -->
+
+    <BlogList posts={page.data} />
+
+    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+  </section>
+</Layout>

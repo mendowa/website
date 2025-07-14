@@ -1,0 +1,106 @@
+---
+publishDate: 2025-07-14T00:00:00Z
+author: Davidson Rafael K.N.
+title: 7 Fitur Tersembunyi TypeScript yang Jarang Digunakan tapi Powerful
+excerpt: Banyak developer pakai TypeScript hanya di permukaan. Yuk kenali fitur-fitur tersembunyinya yang bisa bikin kodingan kamu makin aman, singkat, dan cerdas.
+image: https://images.unsplash.com/photo-1587614203976-365c74645e83?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+category: Programming
+tags:
+  - typescript
+  - programming tips
+  - clean code
+  - advanced typescript
+metadata:
+  canonical: https://mendowa.com/blog/smart-typescript-tips
+---
+
+TypeScript makin populer dan udah jadi bagian utama di banyak proyek modern, terutama di frontend. Tapi sayangnya, banyak developer cuma pakai fitur-fitur dasarnya. Padahal ada beberapa fitur tersembunyi yang bisa bantu kamu menulis kode lebih aman, lebih efisien, dan pastinya lebih “smart”. Berikut 7 fitur TypeScript yang jarang dipakai tapi sangat berguna:
+
+## 1. **Template Literal Types**
+
+Kamu bisa bikin type string yang lebih spesifik, misalnya:
+
+```ts
+type HttpMethod = 'GET' | 'POST';
+type Route = `/api/${string}`;
+```
+
+Ini bikin string kamu jauh lebih terstruktur dan terkontrol.
+
+## 2. **Satisfies Operator**
+
+Digunakan untuk memastikan nilai cocok dengan tipe tertentu **tanpa kehilangan literal types**:
+
+```ts
+const user = {
+  name: 'Alice',
+  age: 25,
+} satisfies { name: string; age: number };
+```
+
+Dengan ini, kamu tetap bisa akses `user.name` sebagai `'Alice'`, bukan cuma `string`.
+
+## 3. **Infer di Conditional Types**
+
+Powerful banget buat bikin generic type utility:
+
+```ts
+type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
+```
+
+## 4. **Key Remapping di Mapped Types**
+
+Bisa ubah nama properti saat bikin tipe baru:
+
+```ts
+type PrefixKeys<T> = {
+  [K in keyof T as `data_${string & K}`]: T[K];
+};
+```
+
+## 5. **Const Assertions (`as const`)**
+
+Supaya value nggak auto diubah jadi tipe umum:
+
+```ts
+const role = ['admin', 'user', 'guest'] as const;
+type Role = (typeof role)[number];
+```
+
+## 6. **Never Type Buat Exhaustive Checking**
+
+Cocok buat `switch-case` supaya semua kemungkinan ditangani:
+
+```ts
+function handle(value: 'a' | 'b') {
+  switch (value) {
+    case 'a':
+      return 1;
+    case 'b':
+      return 2;
+    default:
+      const _exhaustiveCheck: never = value; // error kalau ada case yang belum ditangani
+      return _exhaustiveCheck;
+  }
+}
+```
+
+## 7. **Declaration Merging**
+
+TypeScript bisa gabungin 2 deklarasi dengan nama sama:
+
+```ts
+declare module 'react' {
+  interface HTMLAttributes<T> {
+    customProp?: string;
+  }
+}
+```
+
+Kamu bisa extend interface yang udah ada tanpa harus override semuanya.
+
+---
+
+Fitur-fitur di atas emang nggak selalu keliatan, tapi justru di situlah kekuatannya. Pake TypeScript nggak cuma soal bikin semua “strict”, tapi juga tentang bagaimana kamu bisa pakai fiturnya dengan elegan dan efisien.
+
+Kalau kamu pakai salah satu dari fitur ini di proyek kamu, atau punya tips lain? Boleh banget share ke kita lewat [@mendowa.dev](https://instagram.com/mendowa.dev) ya!

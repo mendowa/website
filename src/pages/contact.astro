@@ -1,0 +1,76 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Contact"
+    title="Ada yang Mau Ditanyain?"
+    subtitle="Hubungi kami kalau ada yang bikin bingung atau pengen lo sampaikan."
+  />
+
+  <ContactUs
+    id="form"
+    title="Langsung Aja Kirim Pesan!"
+    subtitle="Kalau lo gak nemu jawaban di FAQ atau dokumen, tinggal kirim aja pesan ke kita. Kita siap bantu."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Nama',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Pesan',
+    }}
+    disclaimer={{
+      label: 'Dengan mengirim pesan ini, lo setuju kalau info lo bakal kita simpan dan bales secepatnya.',
+    }}
+    description="Biasanya kita bales kurang dari 24 jam kok. Tapi kalo urgent, langsung aja ke Discord."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Cara Lain Buat Hubungi Kita"
+    items={[
+      {
+        title: 'Butuh bantuan?',
+        description: 'Butuh bantuan bisa contact kita di Discord atau email. Kita standby bantuin kok.',
+      },
+      {
+        title: 'Request software atau tools?',
+        description: 'Tinggal email aja bray. Bisa juga lewat channel request di Discord.',
+      },
+      { title: 'Nemu link mati?', description: 'Kasih tau aja atmin. Kita stay, bakalan langsung benerin link-nya.' },
+      {
+        title: 'Mau kerja sama atau collab?',
+        description: 'Bisa banget. Tinggal hubungi kita di email atau Discord ya!',
+      },
+      { title: 'Punya ide atau saran?', description: 'Bener banget, kita dengerin kok. Langsung aja sampein idenya.' },
+      {
+        title: 'Gak nemu jawaban?',
+        description: 'Yakin udah baca FAQ & Docs? Tapi masih bingung? Contact aja via email.',
+      },
+      {
+        title: 'Ada update software?',
+        description: 'Kalau lo punya update software terbaru yang belum kita upload, share aja link-nya ke kita!',
+      },
+      { title: 'Mau join tim Mendowa?', description: 'Untuk sekarang kita belum open ya guys hehe. Tapi stay tuned!' },
+    ]}
+  />
+</Layout>

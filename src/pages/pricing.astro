@@ -1,0 +1,66 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Dukung Kami — Mendowa',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Dukung Kami"
+    title="100% Gratis. Tapi Lo Bisa Dukung Kami"
+    subtitle="Semua tools di Mendowa bisa lo akses tanpa bayar. Tapi kalau lo mau support biar makin berkembang, ini caranya:"
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Paket Dukungan"
+    subtitle="Pilih cara support yang paling cocok buat lo. Semua bantuan, sekecil apa pun, sangat berarti."
+    columns={3}
+    items={[
+      {
+        title: 'Ngopi Bareng',
+        description:
+          'Dukung dengan harga segelas kopi. Dana bakal dipakai buat bayar server & maintain tools gratisan.',
+        icon: 'tabler:coffee',
+      },
+      {
+        title: 'Supporter Setia',
+        description: 'Lo bantu biar kita bisa update tools lebih rutin dan develop fitur baru.',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Sponsor Komunitas',
+        description: 'Kalau lo punya rezeki lebih dan pengen support besar-besaran, bisa banget!',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    classes={{ container: 'max-w-6xl' }}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Mau Dukung Sekarang?"
+    subtitle="Klik tombol di bawah buat langsung support via Saweria atau hubungi kami buat opsi lain."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Dukung via Saweria',
+        href: 'https://saweria.co/davidsonrafael20',
+      },
+      {
+        variant: 'secondary',
+        text: 'Email Kami',
+        href: 'mailto:davidsonrafael20@gmail.com',
+      },
+    ]}
+  />
+</Layout>

@@ -1,0 +1,179 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Tentang Kami"
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Mendowa Hero Image',
+    }}
+  >
+    <Fragment slot="title">
+      Solusi Digital & Resource Gratis<br />
+      <span class="text-accent dark:text-white">Tanpa Iklan, Tanpa Ribet</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Mendowa adalah perusahaan sekaligus komunitas yang fokus nyediain software crack dan solusi digital yang biasanya
+      mahal jadi gratis. Kami hadir buat lo yang capek harus bayar mahal buat tools penting.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Sekilas Tentang Kami"
+    stats={[
+      { title: 'Kantor', amount: '9 Orang' },
+      { title: 'Sejak', amount: 'Desember 2024' },
+      { title: 'Software Dibagikan', amount: '30+' },
+      { title: 'Kantor Fisik', amount: 'Full Remote' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Kategori Tools yang Tersedia"
+    subtitle="Kita punya berbagai jenis tools dan resource digital yang bisa lo akses secara gratis, tanpa iklan, dan langsung pakai."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Design Tools',
+        description: 'Tools desain grafis, UI/UX, dan lainnya yang udah dikurasi langsung dari permintaan komunitas.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Game',
+        description: 'Koleksi Game crack yang bisa lo mainin tanpa harus bayar mahal.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Dev Tools',
+        description:
+          'Tools buat developer seperti IDE, plugin, dan utilitas produktivitas yang umumnya berbayar jadi gratis.',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Bebas Iklan',
+        description: 'Platform kita bebas dari iklan dan popup yang ganggu. Fokus ke kontennya aja.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Cepat dan Ringan',
+        description: 'Desain dan teknologi yang dipakai bikin website Mendowa super ngebut.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Respons Komunitas',
+        description: 'Sebagian besar tools yang kami sediakan berasal dari request dan masukan komunitas.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Akses Tanpa Login',
+        description: 'Semua bisa diakses tanpa ribet harus daftar atau login.',
+        icon: 'tabler:template',
+      },
+      {
+        title: '100% Gratis',
+        description: 'Lo gak perlu keluar duit sepeser pun buat dapetin semua resource di Mendowa.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Dukungan Komunitas',
+        description: 'Lo bisa join Discord komunitas kami atau langsung kontak via email.',
+        icon: 'tabler:template',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1740&q=80',
+      alt: 'Ilustrasi Mendowa',
+    }}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Lagi Kami Kerjain"
+    subtitle="Beberapa hal yang lagi kami fokusin sekarang."
+    isReversed={true}
+    callToAction={{
+      text: 'Kabarin Kami',
+      href: 'mailto:davidsonrafael20@gmail.com',
+    }}
+    items={[
+      {
+        title: 'Perbaikan UI/UX',
+        description: 'Kami lagi nge-refine tampilan dan pengalaman pengguna biar makin solid.',
+        icon: 'tabler:layout-dashboard',
+      },
+      {
+        title: 'Arah Fullstack Application',
+        description: 'Lagi disiapin sistem backend dan dashboard biar makin bisa di-scale dan interaktif.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Open Request',
+        description: 'Lo punya saran tools atau butuh sesuatu? Langsung kirim via email atau Discord.',
+        icon: 'tabler:message-2',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Lokasi Kami"
+    tagline="Remote Work Based"
+    columns={1}
+    items={[
+      {
+        title: 'Kantor?',
+        description: 'Kami 100% remote dan fleksibel. Kerja dari mana aja.',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Butuh Bantuan atau Kerja Sama?"
+    tagline="Hubungi Kami"
+    columns={1}
+    items={[
+      {
+        title: 'Email',
+        description: 'Hubungi kami langsung di davidsonrafael20@gmail.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Join Discord',
+        description: 'Gabung komunitas Mendowa buat diskusi, request, dan share bareng.',
+        icon: 'tabler:brand-discord',
+      },
+    ]}
+  />
+</Layout>

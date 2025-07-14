@@ -1,0 +1,134 @@
+---
+publishDate: 2023-01-02T00:00:00Z
+title: Smart Patterns & Hidden Features in Go
+author: Davidson Rafael K.N.
+excerpt: Banyak fitur Go yang sederhana tapi powerful, dan sering terlewatkan oleh developer. Artikel ini membahas pola tersembunyi dan trik penggunaan Go secara efisien dan idiomatis.
+image: https://images.unsplash.com/photo-1587614203976-365c74645e83?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+category: Programming
+metadata:
+  canonical: https://mendowa.dev/blog/smart-patterns-go
+tags:
+  - golang
+  - programming
+  - best practices
+---
+
+## Introduction
+
+Go (atau Golang) dikenal karena kesederhanaannya. Tapi di balik kesan minimalis itu, ada banyak fitur tersembunyi dan pola idiomatis yang sering tidak dimanfaatkan secara maksimal.
+
+Artikel ini membahas berbagai pola dan trik tersembunyi dalam bahasa Go yang bisa membuat kode kamu lebih bersih, efisien, dan "Go-idiomatic".
+
+## 1. Label + Loop: Controlled Breaks
+
+```go
+outer:
+  for i := 0; i < 10; i++ {
+    for j := 0; j < 10; j++ {
+      if i*j > 50 {
+        break outer
+      }
+    }
+  }
+```
+
+Label bisa digunakan untuk mengontrol `break` dari nested loops. Ini sangat membantu saat ingin keluar dari banyak level sekaligus tanpa pakai boolean flags.
+
+## 2. Struct Tag Parsing
+
+```go
+type User struct {
+  Name string `json:"name" validate:"required"`
+}
+```
+
+Tag struct bukan hanya buat JSON. Kamu bisa parse tag untuk validasi, permission, binding, atau bahkan dokumentasi runtime.
+
+## 3. Named Return Values = Error Grouping
+
+```go
+func DoSomething() (result int, err error) {
+  defer func() {
+    if r := recover(); r != nil {
+      err = fmt.Errorf("panic: %v", r)
+    }
+  }()
+
+  // logic here
+  return
+}
+```
+
+Named return memudahkan kamu menyisipkan `defer` untuk penanganan error/panic tanpa harus return manual.
+
+## 4. `init()` Function untuk Preload
+
+```go
+var config map[string]string
+
+func init() {
+  config = map[string]string{"env": "production"}
+}
+```
+
+`init()` akan otomatis dieksekusi saat package di-import. Cocok buat inisialisasi sekali jalan.
+
+## 5. Interface Segregation
+
+```go
+type Reader interface {
+  Read(p []byte) (n int, err error)
+}
+
+type Closer interface {
+  Close() error
+}
+
+type ReadCloser interface {
+  Reader
+  Closer
+}
+```
+
+Daripada bikin interface besar, gunakan pattern komposisi kecil seperti ini agar lebih fleksibel.
+
+## 6. GOMAXPROCS = Force Concurrency
+
+```go
+runtime.GOMAXPROCS(4) // maksimal 4 thread CPU
+```
+
+Bisa membantu saat ingin memaksa aplikasi Go pakai seluruh core yang tersedia, apalagi untuk heavy computation.
+
+## 7. Functional Options Pattern
+
+```go
+type Config struct {
+  Timeout time.Duration
+  Retries int
+}
+
+type Option func(*Config)
+
+func WithTimeout(t time.Duration) Option {
+  return func(c *Config) {
+    c.Timeout = t
+  }
+}
+
+func NewClient(opts ...Option) *Client {
+  cfg := &Config{}
+  for _, opt := range opts {
+    opt(cfg)
+  }
+  return &Client{cfg}
+}
+```
+
+Pattern ini bikin kamu bisa bikin konfigurasi dinamis dengan mudah tanpa banyak constructor overload.
+
+## Kesimpulan
+
+Go punya banyak "hidden gems". Kalau kamu paham dan rutin pakai fitur-fitur seperti ini, kamu nggak cuma jadi pengguna Go — tapi benar-benar _idiomatic Gopher_.
+
+> Mau bahas versi lanjutannya? Misal: `go:generate`, build tags, atau interop dengan C/C++ lewat `cgo`? Stay tuned!

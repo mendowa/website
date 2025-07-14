@@ -1,0 +1,297 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+// import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Jelajahi Platform',
+        href: '#features',
+        icon: 'tabler:world',
+      },
+      { text: 'Tentang Kami', href: '#about' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Mendowa Hero Image' }}
+  >
+    <Fragment slot="title">
+      Solusi Digital <span class="text-accent dark:text-white">Untuk Generasi Melek Teknologi</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Mendowa</span> adalah platform digital yang fokus pada penyediaan tools, software insights,
+        dan alternatif teknologi masa kini.
+      </span>
+      Cocok buat kreator, developer, & pengguna digital yang butuh solusi cepat dan relevan.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Mindset Kami:" description="Teknologi itu harusnya mudah, bebas, dan ngebantu lo berkembang." />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Kenapa Mendowa?"
+    title="Tools & Resource untuk Lo yang Melek Teknologi"
+    subtitle="Kami bantu lo eksplor lebih luas dunia digital lewat fitur-fitur pintar dan efisien."
+    items={[
+      {
+        title: 'Koleksi Tools Terkurasi',
+        description: 'Akses berbagai software, tools, dan solusi digital yang berguna dan efisien untuk kebutuhan lo.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Ramah Buat Pemula',
+        description: 'Gak ribet, gak perlu coding jago. Semua orang bisa mulai eksplor.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Sumber Terbuka & Alternatif',
+        description: 'Dukung solusi yang lebih fleksibel dan transparan lewat opsi-opsi open-source dan gratis.',
+        icon: 'tabler:lock-open',
+      },
+      {
+        title: 'Komunitas Supportif',
+        description: 'Bareng-bareng tumbuh di komunitas yang sama-sama haus belajar dan berbagi.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Update Rutin',
+        description: 'Kita terus ngecek perkembangan terbaru biar lo selalu dapet versi terbaik.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Cepat dan Ringan',
+        description: 'Website kita performa tinggi, akses cepat, dan mobile-friendly.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Tentang Mendowa"
+    title="Berani, Cerdas, dan Fleksibel — Itulah Kami"
+    items={[
+      {
+        title: 'Fokus ke Value, bukan Hype',
+        description: 'Kami cari tools yang beneran ngebantu, bukan sekadar tren.',
+      },
+      {
+        title: 'User-oriented',
+        description: 'Kami dengerin apa yang lo butuhin, dan terus improve dari situ.',
+      },
+      {
+        title: 'Desain Simpel & Efektif',
+        description: 'Biar cepat dipahami dan enak dipakai sehari-hari.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c',
+      alt: 'Mendowa Core Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Gak usah ribet, yang penting jalan
+      </h3>
+      Kami fokus di solusi nyata buat masalah lo sehari-hari dalam dunia digital.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Bikin User Betah',
+        description:
+          'Navigasi gampang, tampilannya clean, dan gak banyak gimmick. Bikin orang balik lagi karena nyaman.',
+      },
+      {
+        title: 'Selalu Di-update',
+        description:
+          'Kita gak mau lo ketinggalan zaman. Jadi kalo ada versi baru atau update, langsung kita bawa ke Mendowa.',
+      },
+      {
+        title: 'Gak Buang Waktu',
+        description: 'Langsung pakai. Gak perlu instal ribet atau baca manual panjang lebar. Klik, jalan, kelar.',
+      },
+      {
+        title: 'Dibangun Bareng Komunitas',
+        description: `Masukan lo itu penting. Kita dengerin dan kembangin bareng komunitas supaya Mendowa makin solid.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Astronauts Image',
+    }}
+  >
+    <Fragment slot="content">
+      Kita bikin ini bukan cuma buat tampil keren. Tapi biar beneran bantu lo berkembang di dunia digital.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Mulai Eksplorasi Teknologi Bareng Mendowa"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Masuk ke Platform</span>',
+        description: 'Akses website dan lihat koleksi tools, resource, dan solusi yang udah kami siapin.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Pilih Sesuai Kebutuhan</span>',
+        description: 'Cari yang paling cocok buat lo, dari kategori atau kebutuhan spesifik.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Langsung Gunain</span>',
+        description: 'Download, gunakan, dan modifikasi sesuai gaya lo sendiri.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Siap Ngebut!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180',
+      alt: 'Langkah-langkah',
+    }}
+  />
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Explore Artikel dan Update Terbaru"
+    information={`Di blog ini lo bakal nemuin berbagai tutorial, tips teknologi, dan update terbaru seputar software crack yang lagi naik daun.
+                Gak cuma itu, kadang kita juga bahas hal random tapi tetap bermanfaat buat lo yang hidup di dunia digital. Stay tuned, bro!`}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Pertanyaan yang Sering Ditanyain"
+    subtitle="Masih ragu atau bingung? Tenang, lo gak sendirian."
+    tagline="FAQ"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Mendowa ini sebenernya buat siapa sih?',
+        description:
+          'Buat lo yang haus tools digital, terutama anak muda yang pengen explore software crack, tutorial, atau alternatif teknologi tanpa ribet.',
+      },
+      {
+        title: 'Mendowa ngasih apa aja?',
+        description:
+          'Kita nyediain kumpulan software crack terupdate dan tutorial cara gunainnya. Intinya, semua hal yang bisa bikin workflow lo lebih gacor.',
+      },
+      {
+        title: 'Aman gak sih akses Mendowa?',
+        description:
+          'Aman banget. Gak ada redirect random, gak ada iklan tipu-tipu. Lo stay di situs ini, tanpa kejutan yang bikin emosi.',
+      },
+      {
+        title: 'Software yang disediain legal atau crack?',
+        description:
+          'Kita fokus di crack. Biar lo bisa coba full version tanpa harus mikir dompet. Tapi inget, bijaklah dalam penggunaan.',
+      },
+      {
+        title: 'Gratis semua kah?',
+        description:
+          '100% gratis. Gak ada biaya langganan, gak ada hidden cost. Cuma perlu koneksi internet dan niat explore.',
+      },
+      {
+        title: 'Perlu login dulu gak?',
+        description: 'Gak perlu. Tinggal buka website, klik, download, selesai. Simpel kayak mie instan.',
+      },
+      {
+        title: 'Update software-nya rutin gak?',
+        description: 'Kalo ada update dari developer aslinya, kita juga update. Jadi lo dapet versi paling fresh.',
+      },
+      {
+        title: 'Gue bisa request tools atau software yang belum ada?',
+        description: 'Bisa banget. Kasih tau aja tools yang lo cari, nanti kita cariin dan siapin kalau bisa.',
+      },
+      {
+        title: 'Mendowa bisa diakses di HP juga gak?',
+        description: 'Bisa dong. Baik lewat HP atau desktop, tampilannya tetap enak diliat dan gampang dinavigasi.',
+      },
+      {
+        title: 'Kalau ada bug, error, atau link mati ke mana lapor?',
+        description:
+          'Langsung kabarin aja ke gw: davidsonrafael20@gmail.com. Kita bales secepatnya, asal bukan jam tidur.',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Downloads', amount: '132K' },
+      { title: 'Stars', amount: '24.8K' },
+      { title: 'Forks', amount: '10.3K' },
+      { title: 'Users', amount: '48.4K' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Mulai Sekarang',
+        href: '#features',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Jelajahi Dunia Digital<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> Bareng Mendowa</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Akses cepat. Tools terkurasi. Solusi yang relevan. Lo gak sendiri di dunia digital.
+    </Fragment>
+  </CallToAction>
+</Layout>

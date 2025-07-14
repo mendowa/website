@@ -1,0 +1,21 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { getHomePermalink } from '~/utils/permalinks';
+
+const title = 'Halaman Gak Ketemu';
+---
+
+<Layout metadata={{ title }}>
+  <section class="flex items-center h-full p-16">
+    <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+      <div class="max-w-md text-center">
+        <h2 class="mb-8 font-bold text-9xl text-primary">404</h2>
+        <p class="text-3xl font-semibold">Yah, halamannya gak ada 😢</p>
+        <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
+          Mungkin link-nya salah, atau udah dihapus. Tapi tenang, masih banyak hal seru di homepage.
+        </p>
+        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">Balik ke homepage</a>
+      </div>
+    </div>
+  </section>
+</Layout>
